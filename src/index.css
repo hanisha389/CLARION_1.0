@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Lora:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 99%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 99%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 99%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 96 16% 70%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 220 22% 94%;
+    --secondary-foreground: 0 0% 3%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 53%;
+    --accent: 98 16% 30%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 358 75% 40%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 12% 92%;
+    --input: 0 0% 92%;
+    --ring: 96 16% 70%;
+    --radius: 1.4rem;
+
+    --chart-1: 152 71% 54%;
+    --chart-2: 262 100% 60%;
+    --chart-3: 25 98% 58%;
+    --chart-4: 214 79% 55%;
+    --chart-5: 0 0% 45%;
+
+    --sidebar-background: 210 18% 97%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 0 0% 0%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 100 12% 90%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 92%;
+    --sidebar-ring: 96 16% 70%;
+
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-serif: 'Lora', serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  .dark {
+    --background: 30 40% 2%;
+    --foreground: 25 10% 97%;
+    --card: 37 33% 5%;
+    --card-foreground: 25 10% 97%;
+    --popover: 33 37% 3%;
+    --popover-foreground: 25 10% 97%;
+    --primary: 96 16% 70%;
+    --primary-foreground: 30 33% 1%;
+    --secondary: 35 19% 13%;
+    --secondary-foreground: 25 10% 90%;
+    --muted: 36 20% 10%;
+    --muted-foreground: 25 5% 55%;
+    --accent: 98 16% 30%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 358 75% 40%;
+    --destructive-foreground: 25 10% 97%;
+    --border: 39 27% 15%;
+    --input: 33 30% 8%;
+    --ring: 96 16% 70%;
+
+    --chart-1: 105 80% 30%;
+    --chart-2: 112 63% 40%;
+    --chart-3: 106 48% 50%;
+    --chart-4: 103 52% 70%;
+    --chart-5: 96 16% 70%;
+
+    --sidebar-background: 30 33% 1%;
+    --sidebar-foreground: 25 10% 94%;
+    --sidebar-primary: 96 16% 70%;
+    --sidebar-primary-foreground: 30 33% 1%;
+    --sidebar-accent: 98 16% 30%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 35 26% 12%;
+    --sidebar-ring: 96 16% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    letter-spacing: -0.025em;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    letter-spacing: -0.04em;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+  .glass-card {
+    @apply bg-white/[0.03] backdrop-blur-2xl border border-white/[0.06] rounded-2xl;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+}
